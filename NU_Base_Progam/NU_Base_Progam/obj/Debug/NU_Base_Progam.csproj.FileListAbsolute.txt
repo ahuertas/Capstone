@@ -1,0 +1,14 @@
+C:\Users\ahuer\Desktop\Capstone\Capstone\NU_Base_Progam\NU_Base_Progam\bin\Debug\NU_Base_Progam.exe.config
+C:\Users\ahuer\Desktop\Capstone\Capstone\NU_Base_Progam\NU_Base_Progam\bin\Debug\NU_Base_Progam.exe
+C:\Users\ahuer\Desktop\Capstone\Capstone\NU_Base_Progam\NU_Base_Progam\bin\Debug\NU_Base_Progam.pdb
+C:\Users\ahuer\Desktop\Capstone\Capstone\NU_Base_Progam\NU_Base_Progam\obj\Debug\NU_Base_Progam.csprojResolveAssemblyReference.cache
+C:\Users\ahuer\Desktop\Capstone\Capstone\NU_Base_Progam\NU_Base_Progam\obj\Debug\MainWindow.g.cs
+C:\Users\ahuer\Desktop\Capstone\Capstone\NU_Base_Progam\NU_Base_Progam\obj\Debug\App.g.cs
+C:\Users\ahuer\Desktop\Capstone\Capstone\NU_Base_Progam\NU_Base_Progam\obj\Debug\NU_Base_Progam_MarkupCompile.cache
+C:\Users\ahuer\Desktop\Capstone\Capstone\NU_Base_Progam\NU_Base_Progam\obj\Debug\NU_Base_Progam_MarkupCompile.lref
+C:\Users\ahuer\Desktop\Capstone\Capstone\NU_Base_Progam\NU_Base_Progam\obj\Debug\MainWindow.baml
+C:\Users\ahuer\Desktop\Capstone\Capstone\NU_Base_Progam\NU_Base_Progam\obj\Debug\NU_Base_Progam.g.resources
+C:\Users\ahuer\Desktop\Capstone\Capstone\NU_Base_Progam\NU_Base_Progam\obj\Debug\NU_Base_Progam.Properties.Resources.resources
+C:\Users\ahuer\Desktop\Capstone\Capstone\NU_Base_Progam\NU_Base_Progam\obj\Debug\NU_Base_Progam.csproj.GenerateResource.Cache
+C:\Users\ahuer\Desktop\Capstone\Capstone\NU_Base_Progam\NU_Base_Progam\obj\Debug\NU_Base_Progam.exe
+C:\Users\ahuer\Desktop\Capstone\Capstone\NU_Base_Progam\NU_Base_Progam\obj\Debug\NU_Base_Progam.pdb
