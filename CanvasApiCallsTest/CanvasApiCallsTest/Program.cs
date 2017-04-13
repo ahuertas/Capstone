@@ -27,16 +27,16 @@ namespace CanvasApiCallsTest
 
                 ////Console.WriteLine(data.Name + ", ends at " + data.End_at);
 
-                //List<SchoolCourse> allCourses = await ApiCalls.getCourses(accessToken, baseURl, courseId);
+                List<SchoolCourse> allCourses = await ApiCalls.getCourses(accessToken, baseURl, courseId);
                 ////string convertedData = JsonConvert.SerializeObject(data);
-                ////List<SchoolCourse> courses = JsonToObjects.convertJsonStringToCourseObject();
-                //foreach (SchoolCourse classes in allCourses)
-                //{
-                //    Console.WriteLine(classes.Name);
-                //}
+                //List<SchoolCourse> courses = JsonToObjects.convertJsonStringToCourseObject();
+                foreach (SchoolCourse classes in allCourses)
+                {
+                    Console.WriteLine(classes.Name);
+                }
 
-                dynamic data = await ApiCalls.list_upcoming_events(accessToken, baseURl, courseId);
-                Console.WriteLine(data);
+                //dynamic data = await ApiCalls.list_upcoming_events(accessToken, baseURl, courseId);
+                //Console.WriteLine(data);
             } 
             catch (Exception e)
             {
