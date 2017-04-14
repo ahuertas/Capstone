@@ -67,7 +67,7 @@ namespace Base_Presentation
             //pass in access token
             MainWindow main = new MainWindow(token);
             main.Show();
-            this.Close();
+            Close();
         }
     }
 }

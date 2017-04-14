@@ -31,13 +31,13 @@ namespace canvasApiLib.Objects
         public string Name { get; set; }
 
         [JsonProperty("has_submitted_submissions")]
-        public bool? Has_submitted { get; set; }
+        public bool Has_submitted { get; set; }
 
         [JsonProperty("html_url")]
         public string Html_Url { get; set; }
 
         [JsonProperty("locked_for_user")]
-        public bool? Locked_for_user { get; set; }
+        public bool Locked_for_user { get; set; }
 
         [JsonProperty("submissions_download_url")]
         public string Submissions_download_url { get; set; }

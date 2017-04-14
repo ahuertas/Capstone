@@ -37,7 +37,7 @@ namespace Base_Presentation.LoginDetails
                 string[] data = personalInfo.Split(' ');
 
                 string password = PasswordClean(data[0]);
-
+                SetAccessToken(data[1]);
                 if(Password.Equals(password))
                 {
                     message = "Welcome, " + Username;

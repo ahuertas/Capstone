@@ -77,6 +77,7 @@ namespace canvasApiLib.API
 
             List<TaskOverview> tasks = JsonConvert.DeserializeObject<List<TaskOverview>>(rval);
             List<Assignment> assignments = new List<Assignment>();
+           
             foreach (TaskOverview assign in tasks)
             {
                 assignments.Add(assign.Assignments);

@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Base_Presentation"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="625">
+        Title="MainWindow" Height="550" Width="725">
     <Grid>
-        
+      
+        <Label x:Name="label" Content="Current Courses" HorizontalAlignment="Left" Margin="23,23,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.524,0.619" Width="85"/>
+        <Label x:Name="label1" Content="To do list" HorizontalAlignment="Left" Margin="509,17,0,0" VerticalAlignment="Top" Width="98" Height="27" RenderTransformOrigin="0.487,0.403"/>
+        <ListBox x:Name="classBox" HorizontalAlignment="Left" Height="100" Margin="30,53,0,0" VerticalAlignment="Top" Width="135" >
+            <TextBlock Text="" Name="classTextBox"/>
+        </ListBox>
+        <ListBox x:Name="taskBox" HorizontalAlignment="Left" Height="118" Margin="509,48,0,0" VerticalAlignment="Top" Width="122">
+            <TextBlock Text="" Name="taskTextBox"/>
+        </ListBox>
+
     </Grid>
 </Window>
