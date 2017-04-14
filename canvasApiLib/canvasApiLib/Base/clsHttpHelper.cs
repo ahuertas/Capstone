@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
-namespace canvasApiLib
+namespace canvasApiLib.Base
 {
     public class clsHttpHelper
     {

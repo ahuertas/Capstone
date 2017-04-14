@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace CanvasApiCallsTest
 {
@@ -70,6 +71,8 @@ namespace CanvasApiCallsTest
                 }
 
             }
+
+            
             
             return JsonConvert.DeserializeObject<List<SchoolCourse>>(rval);
         }
@@ -92,7 +95,20 @@ namespace CanvasApiCallsTest
                     throw new HttpRequestException(rval);
                 }
             }
-            return JsonConvert.DeserializeObject(rval);
+
+           
+            List<TaskOverview> tasks = JsonConvert.DeserializeObject<List<TaskOverview>>(rval);
+            List<Assignment> assignments = new List<Assignment>();
+            foreach (TaskOverview assign in tasks)
+            {
+                assignments.Add(assign.Assignments);
+            }
+
+            // JsonConvert.DeserializeObject(rval);
+            //get all the assignment objects from your todo list
+
+
+            return assignments;
         }
 
         public static async Task<dynamic> list_upcoming_events(string accessToken, string baseUrl, long sisCourseId = 0)

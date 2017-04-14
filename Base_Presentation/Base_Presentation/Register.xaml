@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Base_Presentation"
         mc:Ignorable="d"
-        Title="Register" Height="400" Width="400">
+        Title="Register" Height="500" Width="600">
     <Grid>
         <Label x:Name="label" Content="User name" HorizontalAlignment="Left" Margin="16,23,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.45,0.996"/>
         <TextBox x:Name="Register_name" HorizontalAlignment="Left" Height="23" Margin="16,49,0,0" TextWrapping="Wrap" Text="new user name" VerticalAlignment="Top" Width="213"/>
@@ -15,6 +15,8 @@
         <TextBox x:Name="Register_Access" HorizontalAlignment="Left" Height="103" Margin="19,178,0,0" TextWrapping="Wrap" Text="Paste access token here" VerticalAlignment="Top" Width="295" RenderTransformOrigin="0.359,0.477"/>
         <Button x:Name="btn_GoBack" Content="login" HorizontalAlignment="Left" Margin="13,334,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.493,1.471" Click="btn_GoBack_Click"/>
         <Button x:Name="btn_Submit" Content="submit" HorizontalAlignment="Left" Margin="308,333,0,0" VerticalAlignment="Top" Width="70" Click="btn_Submit_Click" Height="22"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="140" Margin="396,39,0,0" VerticalAlignment="Top" Width="159" Source="Images\Logo\Buddy bleu.png"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="100" Margin="742,321,-248.4,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
 </Window>

@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using canvasApiLib.Base;
 using canvasApiLib.Objects;
 
+
 namespace canvasApiLib.API
 {
     public class ClsCourseApi : clsHttpHelper
@@ -37,12 +38,12 @@ namespace canvasApiLib.API
         }
 
 
-        public static async Task<dynamic> getCourses(string accessToken, string baseUrl, long sisCourseId = 0)
+        public static async Task<dynamic> GetCourses(string accessToken, string baseUrl, long sisCourseId = 0)
         {
             string rval = string.Empty;
             string urlCommand = "/api/v1/courses/?per_page=100";
 
-            using (HttpResponseMessage response = await httpGET(baseUrl, urlCommand, accessToken))
+            using (HttpResponseMessage response = await HttpGET(baseUrl, urlCommand, accessToken))
             {
                 rval = await response.Content.ReadAsStringAsync();
 
@@ -55,6 +56,33 @@ namespace canvasApiLib.API
 
             }
             return JsonConvert.DeserializeObject<List<SchoolCourse>>(rval);
+        }
+
+        public static async Task<dynamic> List_Todo (string accessToken, string baseUrl, long sisCourseId = 0)
+        {
+            string rval = string.Empty;
+            string urlCommand = "/api/v1/users/self/todo";
+
+            using (HttpResponseMessage response = await HttpGET(baseUrl, urlCommand, accessToken))
+            {
+                rval = await response.Content.ReadAsStringAsync();
+
+                if (!response.IsSuccessStatusCode || (rval.Contains("errors") && rval.Contains("message")))
+                {
+                    string msg = "[getCourseDetails]:[" + urlCommand + "] returned status[" + response.StatusCode + "]: " + response.ReasonPhrase;
+                    Console.WriteLine(msg);
+                    throw new HttpRequestException(rval);
+                }
+            }
+
+            List<TaskOverview> tasks = JsonConvert.DeserializeObject<List<TaskOverview>>(rval);
+            List<Assignment> assignments = new List<Assignment>();
+            foreach (TaskOverview assign in tasks)
+            {
+                assignments.Add(assign.Assignments);
+            }
+
+            return assignments;
         }
     }
 }

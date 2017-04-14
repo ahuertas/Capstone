@@ -24,12 +24,15 @@ namespace Base_Presentation
 
         public MainWindow()
         {
-            InitializeComponent();
+
         }
 
         public MainWindow(string token)
         {
             this.token = token;
+            InitializeComponent();
         }
+
+
     }
 }

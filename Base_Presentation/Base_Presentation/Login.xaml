@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Base_Presentation"
         mc:Ignorable="d"
         Icon ="Images/Logo/Buddy bleu.ico"
-        Title="Login" Height="325" Width="520">
+        Title="Login" Height="425" Width="620">
     <Grid>
         <Label x:Name="Name_Block" HorizontalAlignment="Left" Margin="27,53,0,0" Content="Name" VerticalAlignment="Top"/>
         <Label x:Name="Password_block" HorizontalAlignment="Left" Margin="27,116,0,0" Content="Password" VerticalAlignment="Top"/>

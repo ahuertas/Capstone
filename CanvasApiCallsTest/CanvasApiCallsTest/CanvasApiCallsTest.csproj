@@ -46,10 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiCalls.cs" />
+    <Compile Include="Assignment.cs" />
+    <Compile Include="TaskOverview.cs" />
     <Compile Include="clsRegExpressions.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="HttpHelperMethods.cs" />
-    <Compile Include="JsonToObjects.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchoolCourse.cs" />
