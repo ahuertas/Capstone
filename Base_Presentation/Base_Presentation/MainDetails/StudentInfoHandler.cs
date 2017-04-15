@@ -72,7 +72,7 @@ namespace Base_Presentation.MainDetails
             }
             catch (Exception ex)
             {
-                Console.Write("Error thrown");
+                Console.Write("Error thrown " + ex.Message);
             }
 
             return not_submitted;
