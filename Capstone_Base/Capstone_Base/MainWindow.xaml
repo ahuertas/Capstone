@@ -8,9 +8,9 @@
         Title="MainWindow" Height="350" Width="500">
     <Grid>
         <Label x:Name="classlabel" Content="classes" HorizontalAlignment="Left" Margin="22,26,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="tasklabel" Content="task" HorizontalAlignment="Left" Margin="232,26,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="classTextLabel" HorizontalAlignment="Left" Height="74" Margin="14,64,0,0" Content="TEST1" VerticalAlignment="Top" Width="121"/>
-        <Label x:Name="taskTextLabel" HorizontalAlignment="Left" Height="188" Margin="217,58,0,0" Content="TEST2" VerticalAlignment="Top" Width="111"/>
+        <Label x:Name="tasklabel" Content="task" HorizontalAlignment="Left" Margin="19,133,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="classTextLabel" HorizontalAlignment="Left" Height="74" Margin="14,64,0,0" Content="TEST1" VerticalAlignment="Top" Width="396"/>
+        <Label x:Name="taskTextLabel" HorizontalAlignment="Left" Height="95" Margin="12,177,0,0" Content="TEST2" VerticalAlignment="Top" Width="474"/>
 
     </Grid>
 </Window>
