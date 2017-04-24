@@ -6,11 +6,13 @@
         xmlns:local="clr-namespace:Capstone_Base"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="500">
-    <Grid>
-        <Label x:Name="classlabel" Content="classes" HorizontalAlignment="Left" Margin="22,26,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="tasklabel" Content="task" HorizontalAlignment="Left" Margin="19,133,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="classTextLabel" HorizontalAlignment="Left" Height="74" Margin="14,64,0,0" Content="TEST1" VerticalAlignment="Top" Width="396"/>
-        <Label x:Name="taskTextLabel" HorizontalAlignment="Left" Height="95" Margin="12,177,0,0" Content="TEST2" VerticalAlignment="Top" Width="474"/>
+    <Viewbox Stretch="Uniform">
+        <Grid>
+            <Label x:Name="classlabel" Content="classes" HorizontalAlignment="Left" Margin="22,26,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="tasklabel" Content="task" HorizontalAlignment="Left" Margin="270,25,0,0" VerticalAlignment="Top"/>
+            <ListBox x:Name="classBox" HorizontalAlignment="Left" Height="202" Margin="16,58,0,0" VerticalAlignment="Top" Width="100"/>
+            <ListBox x:Name="taskBox" HorizontalAlignment="Left" Height="201" Margin="243,55,0,0" VerticalAlignment="Top" Width="100"/>
 
-    </Grid>
+        </Grid>
+    </Viewbox>
 </Window>

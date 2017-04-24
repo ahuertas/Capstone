@@ -40,6 +40,7 @@ namespace Capstone_Base
             registerName = Register_name.Text;
             registerPassword = Register_pass.Text;
             accessToken = Register_Access.Text;
+            SetUpFolders(registerName,registerPassword,accessToken);
         }
 
         private void SetUpFolders(string name, string password, string accessToken)

@@ -5,21 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Capstone_Base"
         mc:Ignorable="d"
-        Title="RegisterWindow" Height="300" Width="300">
-    <Grid>
-        <Label x:Name="label" Content="User name" HorizontalAlignment="Left" Margin="16,23,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.45,0.996"/>
-        <TextBox x:Name="Register_name" HorizontalAlignment="Left" Height="23" Margin="16,49,0,0" TextWrapping="Wrap" Text="new user name" VerticalAlignment="Top" Width="213"/>
+        Title="RegisterWindow" Height="350" Width="350">
+    <Viewbox Stretch="Uniform">
+        <Grid>
+            <Label x:Name="label" Content="User name" HorizontalAlignment="Left" Margin="16,23,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.45,0.996"/>
+            <TextBox x:Name="Register_name" HorizontalAlignment="Left" Height="23" Margin="16,49,0,0" TextWrapping="Wrap" Text="new user name" VerticalAlignment="Top" Width="213"/>
 
-        <Label x:Name="label2" Content="new password" HorizontalAlignment="Left" Margin="18,88,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="Register_pass" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" Width="213" Margin="17,113,0,0" />
+            <Label x:Name="label2" Content="new password" HorizontalAlignment="Left" Margin="18,88,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="Register_pass" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" Width="213" Margin="17,113,0,0" />
 
-        <Label x:Name="label1" Content="User Access Token" HorizontalAlignment="Left" Margin="20,149,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="Register_Access" HorizontalAlignment="Left" Height="51" Margin="19,178,0,0" TextWrapping="Wrap" Text="Paste access token here" VerticalAlignment="Top" Width="244" RenderTransformOrigin="0.359,0.477"/>
+            <Label x:Name="label1" Content="User Access Token" HorizontalAlignment="Left" Margin="20,149,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="Register_Access" HorizontalAlignment="Left" Height="51" Margin="19,178,0,0" TextWrapping="Wrap" Text="Paste access token here" VerticalAlignment="Top" Width="244" RenderTransformOrigin="0.359,0.477"/>
 
-        <Button x:Name="btn_GoBack" Content="login" HorizontalAlignment="Left" Margin="13,239,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.493,1.471" Height="24" Click="btn_GoBack_Click" />
-        <Button x:Name="btn_Submit" Content="submit" HorizontalAlignment="Left" Margin="208,238,0,0" VerticalAlignment="Top" Width="70"  Height="22" Click="btn_Submit_Click"/>
+            <Button x:Name="btn_GoBack" Content="login" HorizontalAlignment="Left" Margin="13,239,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.493,1.471" Height="24" Click="btn_GoBack_Click" />
+            <Button x:Name="btn_Submit" Content="submit" HorizontalAlignment="Left" Margin="208,238,0,0" VerticalAlignment="Top" Width="70"  Height="22" Click="btn_Submit_Click"/>
 
-        <Image x:Name="image" HorizontalAlignment="Left" Height="58" Margin="232,2,-1.4,0" VerticalAlignment="Top" Width="63" Source="Images\Logo\Buddy bleu.png"/>
+            <Image x:Name="image" HorizontalAlignment="Left" Height="58" Margin="232,2,-1.4,0" VerticalAlignment="Top" Width="63" Source="Images\Logo\Buddy bleu.png"/>
 
-    </Grid>
+        </Grid>
+    </Viewbox>
 </Window>

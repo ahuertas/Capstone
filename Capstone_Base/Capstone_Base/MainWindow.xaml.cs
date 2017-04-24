@@ -14,6 +14,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Capstone_Base.MainDetails;
 using CanvasApiLib.Objects;
+using System.Windows;
+using System.Windows.Threading;
+using System.Threading;
 
 namespace Capstone_Base
 {
@@ -41,11 +44,11 @@ namespace Capstone_Base
             InitializeComponent();
             Run().Wait();
 
-            classTextLabel.Content = classes;
-            Console.WriteLine(classes);
+            //classBox.Items.Add(classes);
+            //Console.WriteLine(classes);
 
-            taskTextLabel.Content = tasks;
-            Console.WriteLine(tasks);
+            //taskBox.Items.Add(tasks);
+            //Console.WriteLine(tasks);
         }
 
         public async Task Run()
@@ -68,26 +71,30 @@ namespace Capstone_Base
 
         private void DisplayText()
         {
+
+            Dispatcher.BeginInvoke(DispatcherPriority.Input, new ThreadStart(() =>
+            {
                 try
                 {
                     foreach (var Class in currentClasses)
                     {
-                        classes += Class.Name + " \n";
+                        classBox.Items.Add(Class.Name);
                     }
 
                     foreach (var task in currentTasks)
                     {
-                        tasks += task.Name + "\n"+
-                        "due at :" + task.Due_at + " \n" + 
-                        task.Points_Possible + "\n";
+                        taskBox.Items.Add(task.Name + "\n" +
+                        "due at :" + task.Due_at + " \n" +
+                        task.Points_Possible + "\n");
                     }
                 }
                 catch (Exception err)
                 {
                     MessageBox.Show(err.Message);
                 }
-       
 
+            }
+            ));
         }
 
     }
