@@ -72,7 +72,9 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -161,7 +163,7 @@
     <Resource Include="Images\Logo\Buddy bleu.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Logo\Buddy bleu.ico" />
+    <Resource Include="Images\Logo\Buddybleu.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

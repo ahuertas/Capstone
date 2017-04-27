@@ -5,14 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Capstone_Base"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="500">
+        Title="MainWindow" Height="550" Width="500"
+        WindowStyle="SingleBorderWindow"
+        
+        >
     <Viewbox Stretch="Uniform">
-        <Grid>
-            <Label x:Name="classlabel" Content="classes" HorizontalAlignment="Left" Margin="22,26,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="tasklabel" Content="task" HorizontalAlignment="Left" Margin="270,25,0,0" VerticalAlignment="Top"/>
-            <ListBox x:Name="classBox" HorizontalAlignment="Left" Height="202" Margin="16,58,0,0" VerticalAlignment="Top" Width="100"/>
-            <ListBox x:Name="taskBox" HorizontalAlignment="Left" Height="201" Margin="243,55,0,0" VerticalAlignment="Top" Width="100"/>
-
+        <Grid Height="405" Width="378">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="classlabel" Content="classes" HorizontalAlignment="Left" Margin="22,26,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+            <Label x:Name="tasklabel" Content="task" HorizontalAlignment="Left" Margin="270,25,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+            <ListBox x:Name="classBox" HorizontalAlignment="Left" Height="194" Margin="16,58,0,0" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
+            <ListBox x:Name="taskBox" HorizontalAlignment="Left" Height="192" Margin="243,55,0,0" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
+            
         </Grid>
     </Viewbox>
 </Window>
