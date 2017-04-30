@@ -27,6 +27,7 @@ namespace Capstone_Base
     /// </summary>
     public partial class MainWindow : Window
     {
+#region Variables
         private static Object mylock = new Object();
         private string token;
         private NotifyIcon MyNotifyIcon;
@@ -34,6 +35,7 @@ namespace Capstone_Base
         private List<SchoolCourse> currentClasses;
         private List<Assignment> currentTasks;
         private bool _isExit;
+#endregion
 
         public  MainWindow(string token)
         {
@@ -69,7 +71,6 @@ namespace Capstone_Base
 
         private void DisplayText()
         {
-
             Dispatcher.BeginInvoke(DispatcherPriority.Input, new ThreadStart(() =>
             {
                 try
@@ -94,7 +95,9 @@ namespace Capstone_Base
             }
             ));
         }
-       
+
+
+#region Notify Methods
         private void NotifationSetUp()
         {
             MyNotifyIcon = new System.Windows.Forms.NotifyIcon();
@@ -111,7 +114,6 @@ namespace Capstone_Base
 
             MyNotifyIcon.ContextMenuStrip.Items.Add("Exit").Click += (s, e) => ExitApp();
         }
-
 
         private void DisplayMainWindow()
         {
@@ -145,6 +147,6 @@ namespace Capstone_Base
                 this.Hide();
             }
         }
-
+#endregion
     }
 }

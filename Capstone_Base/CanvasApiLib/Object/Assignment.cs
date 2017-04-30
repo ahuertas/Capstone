@@ -41,5 +41,8 @@ namespace CanvasApiLib.Objects
 
         [JsonProperty("submissions_download_url")]
         public string Submissions_download_url { get; set; }
+
+        [JsonProperty("due_date_required")]
+        public bool Due_date_required { get; set; }
     }
 }

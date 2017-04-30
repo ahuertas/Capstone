@@ -38,7 +38,16 @@ namespace CanvasApiCallsTest
                List<Assignment> data = await ApiCalls.list_course_todo(accessToken, baseURl, courseId);
                 foreach (var task in data)
                 {
-                    Console.WriteLine(task.Name + ": due " + task.Due_at);
+                    if(!task.Due_date_required)
+                    {
+                        Console.WriteLine("Particpation assignment: " + task.Name);
+                    }
+                    else
+                    {
+                        Console.WriteLine(task.Name + ": due " + task.Due_at);
+
+                    }
+                   
                 }
                 //Console.WriteLine(data);
             }

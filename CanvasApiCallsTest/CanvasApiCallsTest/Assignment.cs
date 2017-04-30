@@ -39,6 +39,15 @@ namespace CanvasApiCallsTest
         [JsonProperty("locked_for_user")]
         public bool? Locked_for_user { get; set; }
 
+        [JsonProperty("submission_types")]
+        public string[] Submission_type { get; set; }
+
+        [JsonProperty("due_date_required")]
+        public bool Due_date_required { get; set; }
+
+        [JsonProperty("is_quiz_assignment")]
+        public bool Is_quiz_assignment { get; set; }
+
         [JsonProperty("submissions_download_url")]
         public string Submissions_download_url { get; set; }
     }

@@ -96,7 +96,7 @@ namespace CanvasApiCallsTest
                 }
             }
 
-           
+
             List<TaskOverview> tasks = JsonConvert.DeserializeObject<List<TaskOverview>>(rval);
             List<Assignment> assignments = new List<Assignment>();
             foreach (TaskOverview assign in tasks)
@@ -108,7 +108,7 @@ namespace CanvasApiCallsTest
             //get all the assignment objects from your todo list
 
 
-            return assignments;
+            return assignments;//JsonConvert.DeserializeObject<dynamic>(rval);
         }
 
         public static async Task<dynamic> list_upcoming_events(string accessToken, string baseUrl, long sisCourseId = 0)
