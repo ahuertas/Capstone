@@ -1,0 +1,21 @@
+﻿<Window x:Class="Capstone_Base_2.View.SecurityWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Capstone_Base_2.View"
+        mc:Ignorable="d"
+        Title="SecurityWindow" Height="350" Width="325"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="129,54,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Security_Name"  HorizontalAlignment="Left" Height="23" Margin="99,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="What is your super secret you told your buddy?" HorizontalAlignment="Left" Margin="32,154,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Security_Answer" HorizontalAlignment="Left" Height="23" Margin="79,184,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="170"/>
+        <Button x:Name="btn_Remeber"  Content="Remember" HorizontalAlignment="Left" Margin="210,240,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="Btn_Remeber_Click"/>
+        <Button x:Name="btn_Back" Content="Go Back" HorizontalAlignment="Left" Margin="44,240,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="Btn_Back_Click"/>
+
+
+    </Grid>
+</Window>

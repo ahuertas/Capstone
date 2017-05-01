@@ -1,0 +1,19 @@
+﻿<Window x:Class="Capstone_Base_2.View.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Capstone_Base_2.View"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="450" Width="625"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button x:Name="btn_Register" Content="Register" HorizontalAlignment="Left" Margin="52,259,0,0" VerticalAlignment="Top" Width="116" Height="26" Click="btn_Register_Click"/>
+        <Button x:Name="btn_Login"  Content="Login" HorizontalAlignment="Left" Margin="450,259,0,0" VerticalAlignment="Top" Width="116"  Height="26" Click="btn_Login_Click"/>
+        <Button x:Name="btn_Forgotten"  Content="Forgot Password?" HorizontalAlignment="Left" Margin="450,320,0,0" VerticalAlignment="Top" Width="116"  Height="26" Click="btn_Forgotten_Click"/>
+        <TextBox x:Name="txt_Name" HorizontalAlignment="Left" Height="23" Margin="450,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="passBox" HorizontalAlignment="Left" Margin="450,209,0,0" VerticalAlignment="Top" Width="116" Height="23"/>
+        <Label x:Name="Lbl_Name"  Content="username" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="380,138,0,0"/>
+        <Label x:Name="Lbl_Pass"  Content="password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="380,209,0,0"/>
+    </Grid>
+</Window>
