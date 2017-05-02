@@ -15,5 +15,7 @@
         <PasswordBox x:Name="passBox" HorizontalAlignment="Left" Margin="450,209,0,0" VerticalAlignment="Top" Width="116" Height="23"/>
         <Label x:Name="Lbl_Name"  Content="username" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="380,138,0,0"/>
         <Label x:Name="Lbl_Pass"  Content="password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="380,209,0,0"/>
+        <Image HorizontalAlignment="Left" Height="176" Margin="22,31,0,0" VerticalAlignment="Top" Width="202" Source="Model\Images\Logo\buddy.png"/>
+        <Label Content="NU Buddy" FontSize="25" FontStyle="Italic"  HorizontalAlignment="Left" Margin="266,31,0,0" VerticalAlignment="Top" Height="41" Width="127"/>
     </Grid>
 </Window>

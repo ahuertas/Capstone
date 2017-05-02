@@ -23,6 +23,7 @@
         <TextBox x:Name="txt_New_Pass" HorizontalAlignment="Left" Height="23" Margin="5,130,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
         <TextBox x:Name="txt_New_AT" HorizontalAlignment="Left" Height="52" Margin="5,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="228"/>
         <TextBox x:Name="txt_New_Sec" HorizontalAlignment="Left" Height="23" Margin="5,285,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+        <TextBox HorizontalAlignment="Left" Height="249" Margin="359,32,0,0" TextWrapping="Wrap"  Text="&#x9;When you register, please enter in the information to the following fields.&#xD;&#xA;&#xD;&#xA;&#x9;The username and password are standard, but for more information on how to get a Access Token to connect to the LMS, follow the guide.&#xD;&#xA;&#xD;&#xA;&#x9;The secret is a pass phrase to help you remember the password should you ever forget.&#xD;&#xA;&#xD;&#xA;" VerticalAlignment="Top" Width="227"/>
 
     </Grid>
 </Window>
