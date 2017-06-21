@@ -27,18 +27,38 @@ namespace CanvasApiCallsTest
 
                 ////Console.WriteLine(data.Name + ", ends at " + data.End_at);
 
-                //List<SchoolCourse> allCourses = await ApiCalls.getCourses(accessToken, baseURl, courseId);
-                //////string convertedData = JsonConvert.SerializeObject(data);
-                ////List<SchoolCourse> courses = JsonToObjects.convertJsonStringToCourseObject();
-                //foreach (SchoolCourse classes in allCourses)
-                //{
-                //    Console.WriteLine(classes.Name);
-                //}
-
-               List<Assignment> data = await ApiCalls.list_course_todo(accessToken, baseURl, courseId);
-                foreach (var task in data)
+                List<SchoolCourse> allCourses = await ApiCalls.getCourses(accessToken, baseURl, courseId);
+                ////string convertedData = JsonConvert.SerializeObject(data);
+                //List<SchoolCourse> courses = JsonToObjects.convertJsonStringToCourseObject();
+                List<Enrollment> data = await ApiCalls.GetCourseGrades(accessToken,baseURl,courseId,courseId);
+                foreach (SchoolCourse classes in allCourses)
                 {
-                    if(!task.Due_date_required)
+                    if(Convert.ToDateTime(classes.End_at) > DateTime.Now)
+                    {
+                         Console.WriteLine(classes.Name);
+                        foreach (var item in data)
+                        {
+                            if (item.Course_Id == classes.Id)
+                            {
+                                Console.WriteLine(classes.Name + " final grade is " + item.Grade.Current_grade + " or a " + item.Grade.Current_Score);
+                            }
+                        }
+                    }
+                }
+
+
+                List<Assignment> data2 = await ApiCalls.list_course_todo(accessToken, baseURl, courseId);
+                foreach (var task in data2)
+                {
+                    
+                    foreach (var item in data)
+                    {
+                        if (item.Course_Id == task.Course_id)
+                        {
+                            Console.WriteLine(item.Grade.Final_grade);
+                        }
+                    }
+                    if (!task.Due_date_required && task.Description.Length< 10)
                     {
                         Console.WriteLine("Particpation assignment: " + task.Name);
                     }
@@ -47,9 +67,9 @@ namespace CanvasApiCallsTest
                         Console.WriteLine(task.Name + ": due " + task.Due_at);
 
                     }
-                   
+
                 }
-                //Console.WriteLine(data);
+                
             }
             catch (Exception e)
             {

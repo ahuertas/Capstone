@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="CapstoneFinal.UserControls.DistractionEliminator"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CapstoneFinal.UserControls"
+             xmlns:Controls ="http://metro.mahapps.com/winfx/xaml/controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1000">
+    <Grid Margin="0,8,0,-7.6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+      
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Button Style="{DynamicResource MetroCircleButtonStyle}"   TextElement.Foreground="White"  Background="{DynamicResource AccentColorBrush}" Content="Back" HorizontalAlignment="Left" Margin="37,29,0,0" VerticalAlignment="Top" Width="87" Height="82" Click="Button_Click"/>
+
+        <TextBox x:Name="site_txtBlk"  Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="23" Margin="26,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="142"/>
+        <Label Content="Block Website EX. www.google.com"   TextElement.FontSize="16" HorizontalAlignment="Left" Margin="26,149,0,0" VerticalAlignment="Top" Width="273"/>
+        <Button x:Name="Block"  
+                Content="block" 
+                HorizontalAlignment="Left" 
+                Margin="26,240,0,0" 
+                VerticalAlignment="Top"
+                Width="75" 
+                Click="Block_Click"
+                TextElement.Foreground="White"  
+                Background="{DynamicResource AccentColorBrush}"  />
+        <Button x:Name="Unblock" 
+                Content="unblock" 
+                HorizontalAlignment="Left"
+                Margin="26,368,0,0" 
+                VerticalAlignment="Top" 
+                Width="75" Click="Unblock_Click"
+                TextElement.Foreground="White"  
+                Background="{DynamicResource AccentColorBrush}"/>
+        <ListView x:Name="BlockedList"  HorizontalAlignment="Left" Height="457" VerticalAlignment="Top" Width="245" Margin="299,90,0,0" Grid.ColumnSpan="3"/>
+
+
+        <Label Content="Unblock last added website"  TextElement.FontSize="16" HorizontalAlignment="Left" Margin="26,323,0,0" VerticalAlignment="Top" Width="209"/>
+        <Button x:Name="Start"  
+                Content="start" 
+                HorizontalAlignment="Left"
+                Margin="85.6,520,0,0" 
+                VerticalAlignment="Top"
+                Width="75"
+                Click="Start_Click" Grid.Column="2"
+                TextElement.Foreground="White"  
+                Background="{DynamicResource AccentColorBrush}"  
+                />
+        <Button x:Name="Stop"
+                Content="Stop" 
+                HorizontalAlignment="Left"
+                Margin="324.6,520,0,0" 
+                VerticalAlignment="Top"
+                Width="75"
+                Click="Stop_Click"
+                Grid.Column="2"
+                TextElement.Foreground="White"  
+                Background="{DynamicResource AccentColorBrush}"  
+                />
+
+        <GridSplitter Grid.Column="2" Width="3" Margin="0,0,427,-10.4" Height="610" VerticalAlignment="Stretch" />
+
+        <Label Content="Black listed sites"  TextElement.FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="299,57,0,0" Width="245" Grid.ColumnSpan="3"/>
+        <Label Content="Block sites for...."  TextElement.FontSize="16" Grid.Column="2" HorizontalAlignment="Left" Margin="85.6,29,0,0" VerticalAlignment="Top" Width="218"/>
+        <TextBox x:Name="TimerHours" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="85.6,73,0,0" TextWrapping="Wrap" Text="0" Controls:TextBoxHelper.ClearTextButton="True" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TimerMinutes"  Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="85.6,132,0,0" TextWrapping="Wrap" Text="0" Controls:TextBoxHelper.ClearTextButton="True" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TimerSeconds"  Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="85.6,189,0,0" TextWrapping="Wrap" Text="0" Controls:TextBoxHelper.ClearTextButton="True"  VerticalAlignment="Top" Width="120"/>
+        <Label Content="Hours"   TextElement.FontSize="16" Grid.Column="2" HorizontalAlignment="Left" Margin="235.6,73,0,0" VerticalAlignment="Top" Width="68"/>
+        <Label Content="Minutes"  TextElement.FontSize="16"  Grid.Column="2" HorizontalAlignment="Left" Margin="235.6,132,0,0" VerticalAlignment="Top" Width="68"/>
+        <Label Content="seconds"   TextElement.FontSize="16" Grid.Column="2" HorizontalAlignment="Left" Margin="235.6,188,0,0" VerticalAlignment="Top" Width="68"/>
+        <Label Content="Time Left"   TextElement.FontSize="16" Grid.Column="2" HorizontalAlignment="Left" Margin="85.6,291,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="VisibleHours" TextElement.FontSize="16" Grid.Column="2" HorizontalAlignment="Left" Margin="85.6,350,0,0" VerticalAlignment="Top" Height="74" Width="75"/>
+        <Label x:Name="VisibleMinutes" TextElement.FontSize="16" Grid.Column="2" HorizontalAlignment="Left" Margin="208.6,350,0,0" VerticalAlignment="Top" Height="74" Width="75"/>
+        <Label x:Name="VisibleSeconds" TextElement.FontSize="16" Grid.Column="2" HorizontalAlignment="Left" Margin="324.6,350,0,0" VerticalAlignment="Top" Height="74" Width="75"/>
+        <Label Content=":" TextElement.FontSize="30" Grid.Column="2" HorizontalAlignment="Left" Margin="172.6,350,0,0" VerticalAlignment="Top" Height="74" Width="26"/>
+        <Label Content=":" TextElement.FontSize="30" Grid.Column="2" HorizontalAlignment="Left" Margin="283.6,350,0,0" VerticalAlignment="Top" Height="74" Width="26"/>
+        <CheckBox  x:Name="FailSafe" Content="Done studying before timer went off" TextElement.FontSize="16" Grid.Column="2" HorizontalAlignment="Left" Margin="85.6,457,0,0" VerticalAlignment="Top" Width="304" Height="48" Checked="FailSafe_Checked"/>
+
+
+    </Grid>
+</UserControl>

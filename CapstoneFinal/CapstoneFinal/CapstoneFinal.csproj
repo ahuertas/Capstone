@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D32E4B7-4E23-476D-97E7-0BC9BE1DB3AD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CapstoneFinal</RootNamespace>
+    <AssemblyName>CapstoneFinal</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Buddybleu.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.6.0-alpha002\lib\net45\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Titanium.Web.Proxy, Version=3.0.32.0, Culture=neutral, PublicKeyToken=8e41e1f1c790d7cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\Titanium.Web.Proxy.3.0.32\lib\net45\Titanium.Web.Proxy.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AssignmentWindow.xaml.cs">
+      <DependentUpon>AssignmentWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HelperClasses\ApiHelperClasses\FilterClasses.cs" />
+    <Compile Include="HelperClasses\ApiHelperClasses\StudentInfoHandler.cs" />
+    <Compile Include="HelperClasses\AuthenticateHandler.cs" />
+    <Compile Include="HelperClasses\AuthSecurityHandler.cs" />
+    <Compile Include="HelperClasses\FolderCreationHandler.cs" />
+    <Compile Include="HelperClasses\NotificationHelpers\NotificationBalloonTips.cs" />
+    <Compile Include="HelperClasses\NotificationHelpers\NotificationDevelopment.cs" />
+    <Compile Include="HelperClasses\NotificationHelpers\NotificationLogic.cs" />
+    <Compile Include="HelperClasses\NotificationHelpers\NotificationTimer.cs" />
+    <Compile Include="HelperClasses\ProxyServerHelper\TitaniumProxy.cs" />
+    <Compile Include="HelperClasses\UserDetailsHandler.cs" />
+    <Compile Include="Navigation\ISwitchable.cs" />
+    <Compile Include="Navigation\Switcher.cs" />
+    <Compile Include="UserControls\DistractionEliminator.xaml.cs">
+      <DependentUpon>DistractionEliminator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LoginControl.xaml.cs">
+      <DependentUpon>LoginControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MainWindowControl.xaml.cs">
+      <DependentUpon>MainWindowControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RegisterUserControls\AccessTokenControl.xaml.cs">
+      <DependentUpon>AccessTokenControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RegisterUserControls\RAGControl1.xaml.cs">
+      <DependentUpon>RAGControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RegisterUserControls\RAGControl2.xaml.cs">
+      <DependentUpon>RAGControl2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RegisterUserControls\RAGControl3.xaml.cs">
+      <DependentUpon>RAGControl3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RegisterUserControls\RegisterSlideControlIntro.xaml.cs">
+      <DependentUpon>RegisterSlideControlIntro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RegisterUserControls\SecurityController.xaml.cs">
+      <DependentUpon>SecurityController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RegisterUserControls\ThankYouControl.xaml.cs">
+      <DependentUpon>ThankYouControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RegisterUserControls\UserNameControl.xaml.cs">
+      <DependentUpon>UserNameControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SecurityReturnControl.xaml.cs">
+      <DependentUpon>SecurityReturnControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\AssignmentViewModel.cs" />
+    <Compile Include="ViewModels\GradeViewModel.cs" />
+    <Compile Include="ViewModels\SchoolCourseViewModel.cs" />
+    <Compile Include="ViewModels\TaskOverviewViewModel.cs" />
+    <Page Include="AssignmentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Resources\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\IconsNonShared.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\DistractionEliminator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\LoginControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\MainWindowControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\RegisterUserControls\AccessTokenControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\RegisterUserControls\RAGControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\RegisterUserControls\RAGControl2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\RegisterUserControls\RAGControl3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\RegisterUserControls\RegisterSlideControlIntro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\RegisterUserControls\SecurityController.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\RegisterUserControls\ThankYouControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\RegisterUserControls\UserNameControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SecurityReturnControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Resource Include="Resources\Entypo.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WindowsIcons-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Entypo-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CanvasApiLibrary\CanvasApiLibrary.csproj">
+      <Project>{9d3f16e3-b3f2-4c9d-8980-bb998d8ac520}</Project>
+      <Name>CanvasApiLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Buddybleu.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Buddybleu.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

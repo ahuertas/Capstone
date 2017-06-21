@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="CapstoneFinal.UserControls.RegisterUserControls.ThankYouControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CapstoneFinal.UserControls.RegisterUserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600">
+    <Grid>
+        <Label Content="Pg 8 - Final"  TextElement.FontSize="20"  TextElement.FontStyle="Italic" HorizontalAlignment="Left" Margin="466,23,0,0" VerticalAlignment="Top" Height="38" Width="114"/>
+
+        <Button x:Name="Back" Content="Back" HorizontalAlignment="Left" Margin="90,376,0,0" VerticalAlignment="Top" Width="75" Click="Back_Click"
+                TextElement.Foreground="White"  
+                Background="{DynamicResource AccentColorBrush}"/>
+        <Button x:Name="Next" Content="Done" HorizontalAlignment="Left" Margin="466,376,0,0" VerticalAlignment="Top" Width="75" Click="Next_Click"
+                TextElement.Foreground="White"  
+                Background="{DynamicResource AccentColorBrush}"/>
+        <Label TextElement.FontSize="30" Content="Thank you for &#xD;&#xA;registering for NU Buddy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="114,85,0,0" Width="377"/>
+
+    </Grid>
+</UserControl>

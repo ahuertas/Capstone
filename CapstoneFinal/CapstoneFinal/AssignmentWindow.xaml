@@ -1,0 +1,63 @@
+﻿<Control:MetroWindow x:Class="CapstoneFinal.AssignmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CapstoneFinal"
+        mc:Ignorable="d"
+        xmlns:Control="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+	    xmlns:Behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        
+        Title="NU Buddy" 
+        Height="650" 
+        Width="800"
+        
+        
+        GlowBrush="{DynamicResource AccentColorBrush}"
+        BorderThickness="0"
+                     
+                     
+        WindowStartupLocation="CenterScreen"
+       
+        ResizeMode="CanResizeWithGrip"
+       
+        ShowIconOnTitleBar="True"
+      
+        >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Icons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+<!--
+    <Control:MetroWindow.RightWindowCommands>
+        <Control:WindowCommands>
+            <Button Content="settings" />
+            <Button>
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="20"
+                   Height="20"
+                   Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_alien}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <TextBlock Margin="4 0 0 0"
+                   VerticalAlignment="Center"
+                   Text="options" />
+                </StackPanel>
+            </Button>
+        </Control:WindowCommands>
+    </Control:MetroWindow.RightWindowCommands>
+ -->
+  
+    <Grid x:Name="MainFocus">
+        <TabControl x:Name="AssigmentTabControl"  Margin="0,10,9.6,9" Width="774" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+
+    </Grid>
+
+</Control:MetroWindow>

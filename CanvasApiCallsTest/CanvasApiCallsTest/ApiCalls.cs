@@ -132,6 +132,31 @@ namespace CanvasApiCallsTest
             return JsonConvert.DeserializeObject(rval);
         }
 
+        public static async Task<dynamic> GetCourseGrades (string accessToken, string baseUrl, long courseID, long sisCourseId = 0)
+        {
+
+            string rval = string.Empty;
+            string urlCommand = "/api/v1/users/self/enrollments/?per_page=100";
+
+            //urlCommand = (sisCourseId > 0) ? urlCommand.Replace(":id", "sis_course_id:" + sisCourseId.ToString()) : urlCommand.Replace(":id", canvasCourseId.ToString());
+
+            using (HttpResponseMessage response = await httpGET(baseUrl, urlCommand, accessToken))
+            {
+                rval = await response.Content.ReadAsStringAsync();
+
+                if (!response.IsSuccessStatusCode || (rval.Contains("errors") && rval.Contains("message")))
+                {
+                    string msg = "[getCourseDetails]:[" + urlCommand + "] returned status[" + response.StatusCode + "]: " + response.ReasonPhrase;
+                    Console.WriteLine(msg);
+                    throw new HttpRequestException(rval);
+                }
+            }
+
+            return JsonConvert.DeserializeObject<List<Enrollment>>(rval);
+        }
+
+
+
         public static async Task<dynamic> list_missing_submissions(string accessToken, string baseUrl, long sisCourseId = 0)
         {
             string rval = string.Empty;
@@ -152,5 +177,7 @@ namespace CanvasApiCallsTest
             }
             return JsonConvert.DeserializeObject(rval);
         }
+
+
     }
 }

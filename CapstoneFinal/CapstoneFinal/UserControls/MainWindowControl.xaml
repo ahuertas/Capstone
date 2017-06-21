@@ -1,0 +1,72 @@
+﻿<UserControl 
+             x:Name="MainWindowController"
+             x:Class="CapstoneFinal.UserControls.MainWindowControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CapstoneFinal.UserControls"
+             xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+	         xmlns:Behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+             mc:Ignorable="d" 
+             d:DesignHeight="750" 
+             d:DesignWidth="1200"
+            
+    >
+
+
+    <Grid x:Name="MainControllerFocus">
+
+        <Controls:ProgressRing 
+            x:Name="ProcessRing"
+            IsActive="false" 
+            Foreground="DarkTurquoise" Height="187" Margin="570,345,408,218.4" Width="222" 
+             />
+
+        <Viewbox Margin="299,80,10,0" VerticalAlignment="Top" Stretch="Fill" Height="auto">
+            <Calendar x:Name="MasterCalendar" Height="606" Width="728" CalendarItemStyle="{DynamicResource CalendarItemStyle}" SelectionMode="MultipleRange" SelectedDatesChanged="MasterCalendar_SelectedDateChanged"/>
+        </Viewbox>
+        <Label x:Name="UserName_lbl" TextElement.FontSize="20" Content="Name" HorizontalAlignment="Left" Margin="48,44,0,0" VerticalAlignment="Top" Width="176"/>
+        <Label x:Name="Date_lbl" TextElement.FontSize="20"  Content="Date" HorizontalAlignment="Left" Margin="734,43,0,0" VerticalAlignment="Top" Width="332"/>
+
+        <Button x:Name="Distract_Btn" Style="{DynamicResource MetroCircleButtonStyle}"   TextElement.Foreground="White"  Background="{DynamicResource AccentColorBrush}" Content="Next" HorizontalAlignment="Left" Margin="1053,33,0,0" VerticalAlignment="Top" Width="96" Height="85" 
+                RenderTransformOrigin="0.497,0.526" Click="Distract_Btn_Click"/>
+
+        <TabControl HorizontalAlignment="Left" 
+                    Height="391" Margin="48,296,0,0" 
+                    VerticalAlignment="Top" Width="203"
+                    TabStripPlacement="Top"
+                    x:Name="TabMasterControl"
+                    >
+
+
+            <TabItem Header="Assignments">
+                <Grid Background="#FFE5E5E5">
+                    <ListView x:Name="AssignmentList"   HorizontalAlignment="Left" Height="268" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="198" SelectionChanged="AssignmentList_SelectionChanged">
+
+                    </ListView>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Participation">
+                <Grid Background="#FFE5E5E5">
+                    <ListView x:Name="ParticipationList"  HorizontalAlignment="Left" Height="268" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="198" SelectionChanged="ParticipationList_SelectionChanged">
+
+                    </ListView>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Grade">
+                <Grid Background="#FFE5E5E5">
+                    <ListView x:Name="GradeList"  HorizontalAlignment="Left" Height="268" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="198">
+
+                    </ListView>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <ComboBox  x:Name="ClassListBox"  HorizontalAlignment="Left" Height="38" Margin="48,171,0,0" VerticalAlignment="Top" Width="203" SelectionChanged="ClassListBox_SelectionChanged_1" />
+    </Grid>
+
+
+</UserControl>

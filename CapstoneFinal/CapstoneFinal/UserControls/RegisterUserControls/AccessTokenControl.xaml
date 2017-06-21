@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="CapstoneFinal.UserControls.RegisterUserControls.AccessTokenControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CapstoneFinal.UserControls.RegisterUserControls"
+             xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600">
+
+
+    <Grid  Margin="0,0,0,-0.4" Width="600" Height="450">
+
+        <Label  TextElement.FontSize="16" Content="&#x9;Note you can those to determine how long the token can &#xD;&#xA;last when choosing the expiration date. Feel free to create one that &#xD;&#xA;last as long as you are in Neumont. &#xD;&#xA;&#x9;For testing purposes I left mine to expire never. Remember &#xD;&#xA;to save the access token somewhere safe. It never hurts to have one &#xD;&#xA;just in case!" Margin="0,66,20,222" HorizontalAlignment="Right" Width="518"/>
+        <Button x:Name="Back"
+                Content="Back" 
+                HorizontalAlignment="Left"
+                Margin="106,383,0,0" 
+                VerticalAlignment="Top" 
+                Width="75" Click="Back_Click" 
+                TextElement.Foreground="White"  
+                Background="{DynamicResource AccentColorBrush}"  />
+        <Button x:Name="Next" 
+                Content="Next" 
+                HorizontalAlignment="Left"
+                Margin="405,383,0,0" 
+                VerticalAlignment="Top" 
+                Width="75" 
+                Click="Next_Click" 
+                TextElement.Foreground="White"  
+                Background="{DynamicResource AccentColorBrush}"  />
+        <Label Content="Access Token Placement"  TextElement.FontSize="20" TextElement.FontStyle="Italic"  Margin="106,23,120,389" Width="374"/>
+        <TextBox Controls:TextBoxHelper.ClearTextButton="True" 
+                 x:Name="AccessToken_TxtBox" 
+                 HorizontalAlignment="Left" 
+                 Height="117" 
+                 Margin="106,247,0,0" 
+                 TextWrapping="Wrap" 
+                 Controls:TextBoxHelper.Watermark="Paste Access Token here" 
+                 ToolTip="hi"
+                 VerticalAlignment="Top" 
+                 Width="374">
+
+        </TextBox>
+
+        <Label Content="Pg 5"   TextElement.FontSize="20"  TextElement.FontStyle="Italic" HorizontalAlignment="Left" Margin="520,23,0,0" VerticalAlignment="Top" Height="38" Width="60"/>
+
+    </Grid>
+</UserControl>

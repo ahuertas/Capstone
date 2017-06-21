@@ -1,0 +1,17 @@
+﻿<Window x:Class="Capstone_Base_2.View.RegisterViews.RegisterAccessGuide1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Capstone_Base_2.View.RegisterViews"
+        mc:Ignorable="d"
+        Title="Access Token Guide pg 1" Height="400" Width="400"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Step 1. Login to your Canvas account.&#xA;&#xA;      &#x9;To get the correct information from your Neumont&#xD;&#xA;          LMS account, you will need to login  first. Remember &#xD;&#xA;         to click the stay signed in  checkbox before you log on.&#xA;&#x9;" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Width="374" Height="107"/>
+        <Button x:Name="Back" Content="Back" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="75" Click="Back_Click" />
+        <Button x:Name="Next" Content="Next" HorizontalAlignment="Left" Margin="309,341,0,0" VerticalAlignment="Top" Width="75" Click="Next_Click"/>
+        <Image Margin="10,117,9.6,34.4" Source="/Capstone_Base_2;component/Image2.png" Stretch="Fill"/>
+
+    </Grid>
+</Window>
